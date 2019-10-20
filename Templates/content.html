@@ -1,0 +1,14 @@
+{% extends "home.html" %}  <!--miras alir-->
+
+{% block body %}
+{% if article %}        <!--articl, yeni verilen id meqale varsa,-->
+<h3 class = "text-uppercase text-center">{{article.title}}</h3>
+<hr class = "bg-success">
+<h6 class = "text-center"> Müəllif: {{article.author}}</h6>
+<h6 class = "text-center"> Tarix: {{article.created_date}}<h6>
+<hr class = "bg-success">
+<p>{{article.content|safe}}</p>         <!--safe ile html olan bir sehifedeki kodlar gedir ancaq text saxlayir-->
+{% else %}
+<div class="alert alert-warning">Təəssüf ki, axtardığınız məqalə tapılmadı</div>  <!--Alerti elle daxil etdik-->
+{% endif %}
+{% endblock%}

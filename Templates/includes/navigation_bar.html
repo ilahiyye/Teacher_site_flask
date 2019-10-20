@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info stiky-top "> <!--stiky-top Sehife ne qeder asagi duse de novbar yuxarda qalir-->
+    <a class="navbar-brand font-italic" href="/index">Ana Səhifə</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="navbar-brand font-italic" href="/index/sillabus">Sillabuslar</a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand font-italic" href="/index/books">Mühazirələr</a>
+        </li>
+        <li class="nav-item">
+            <a class="navbar-brand font-italic" href="/index/pers">Fərdi İşlər</a>
+        </li>
+        <li class="nav-item font-italic">
+            <a class="navbar-brand font-italic" href="/index/video">Video Dərslər</a>
+        </li>
+        <li class="nav-item">
+            <a class="navbar-brand font-italic" href="/index/gallery">Şəkillər</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-ml">
+          <li class="nav-item">
+              <a class="navbar-brand text-warning " style= "font message-box"> {{session["username"]}} </a>
+              <a class="navbar-brand" href="/index/control_panel">İdarə et</a>
+              <a class="navbar-brand font-italic font-weight-bold" href="/index/log_out">Çıxış</a>
+          </li>
+      </ul>
+    </div>
+  </nav>

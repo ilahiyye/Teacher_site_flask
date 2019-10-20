@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+{% block body %}
+<h3 class="text-danger text-center font-bold">FƏRDİ İŞLƏR</h3>
+<hr class="bg-danger"> 
+{% include "includes/message.html" %}
+<p class="text-success font-bold">Fərdi işlərinizi göndərmək üçün "Choose File" seçib, "Göndər" buttonuna basın</p>   
+<br>
+<form action="/index/upload_file" method="post" enctype=multipart/form-data class="container" >
+    <dl>
+	    <p>
+		    <input type="file" name="dosya">
+            <input type="submit" value="Göndər" class="btn btn-outline-success"> 
+		</p>
+         
+</form>
+    
+{% if dosya %}      <!--Eger dosya secilibse bu img sekili gorsenecek-->
+    <br>
+    <img width="250px" src="{{ url_for('static', filename='uploads/'+ dosya)}}"/>
+{% endif %}
+
+{% endblock %}

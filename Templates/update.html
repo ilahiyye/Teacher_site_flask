@@ -1,0 +1,17 @@
+{% extends "home.html" %}  <!--miras alir-->
+{% block body %}
+<h5 class="text-danger">Məqalənə Düzəliş Et</h5>
+<hr>
+ {% from "includes/form_help.html" import render_field %}
+<form class="text-muted" method="post">
+     <dl>
+        {{ render_field(form.title,   class="form-control") }}
+        {{ render_field(form.content, class="form-control") }}
+    </dl>
+    <div class="button-right">
+        <button type ="submit" class="btn btn-danger">Yadda saxla</button> 
+    </div>
+    
+    
+</form>
+{% endblock%}

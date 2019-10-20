@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Qeydiyyat</title>
+</head>
+<body>
+    <section class="testimonial" id="testimonial">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-4 py-5 bg-info text-white text-center ">
+                        <div class=" ">
+                            <div class="card-body">
+                                <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                                <h2 class="py-3">Qeydiyyat Səhifəsi</h2>
+                                <p class="font-italic">Əziz tələbələr. Bu səhifədə qeydiyyatdan keçərək siz keçdiyimiz dərslərin sillabusları, dərslərə aid materiallar və başqa faydalı məlumatlarla tanış ola bilərsiz.
+                        </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 py-4 border  text-info text-center">
+                            <h4 class="pb-4">Zəhmət olmasa aşağıdakı xanaları doldurun!</h4>
+                            {% from "includes/form_help.html" import render_field %}  <!--bu hisseye form_help.html gelir-->
+                            <form method="post" class = "container">
+                                    <dl>
+                                        {{ render_field(form.FirstName, class="form-group col-md-6") }}
+                                        {{ render_field(form.LastName, class="form-group col-md-6") }}
+                                        {{ render_field(form.name, class="form-group col-md-6") }}
+                                        {{ render_field(form.sector, class="form-group col-md-6") }}
+                                        {{ render_field(form.email, class="form-group col-md-6") }}
+                                        {{ render_field(form.password, class="form-group col-md-6") }}
+                                        {{ render_field(form.confirm, class="form-group col-md-6") }}
+                                    </dl>
+                                <div class="container">
+                                    <button type ="submit" class="btn btn-outline-danger">Qeydiyyatdan keç</button>
+                                </div>
+                            </form>
+                </div>
+            </div>
+    </section>    
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

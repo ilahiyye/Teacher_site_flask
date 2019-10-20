@@ -1,0 +1,17 @@
+{% extends "home.html" %}  <!--miras alir-->
+{% block body %}
+{% if articles %}
+{% include "includes/message.html" %}
+</ul>
+<table class="table">
+    {% for article in articles %}
+    <tr>
+      <td>{{article.title}} </td>
+      <td>{{article.created_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<div class="alert alert-info"> Xoş Gəlmisiniz, {{session["username"]}}<div>
+{% endif %}
+{% endblock%}

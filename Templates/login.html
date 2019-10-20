@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Qeydiyyat</title>
+</head>
+    
+<body>
+  <section class="testimonial py-5" id="testimonial">
+    <div class="container">
+      <div class="col-md-6 py-5  bg-info text-center font-weight-normal" style="margin:auto">
+         <div class="container">
+            <h4 class="text-white">Giriş</h4>
+            <hr class="bg-danger">
+             <div class="card-body">
+                {% from "includes/form_help.html" import render_field %}
+                 <form method="post">
+                   <dl>
+                      {{ render_field(form.name,     class="form-group col-md-6") }}
+                      {{ render_field(form.password, class="form-group col-md-6") }}
+                    </dl>
+                    <div class="container text-center">
+                      <button type ="submit" class="btn btn-danger">Daxil ol</button>
+                      <a href="{{ url_for('register') }}" class="btn btn-danger">Qeydiyyatdan keç</a>             
+                    </div>
+                    <br>
+                    {% include "includes/message.html" %}
+                  </form>
+                </div>
+              </div>                     
+          </div>
+        </div>
+    </section>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

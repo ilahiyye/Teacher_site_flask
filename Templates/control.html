@@ -1,0 +1,41 @@
+{% extends "home.html" %}  <!--miras alir-->
+
+{% block body %}
+<h3 class="text-danger font-bold text-center">İDARƏETMƏ PANELİ</h3>
+{% include "includes/message.html" %}
+<hr class="bg-danger">
+<div class="button-right">
+    <h5 class="text-danger font-bold">Məqalələr</h5>
+    <hr class="bg-danger">
+    <a class="btn btn-success" href="/index/control/addarticles">Məqalə Yaz</a>
+</div>
+<br><br>
+{% if articles %}                   <!--articlin butun deyisenlerini gotururuk-->
+<div class="table-responsive">      <!--Cedvelin responsiv edirik-->
+    <table class="table table-light">
+        <thead>
+            <tr class="text-success">
+              <th scope="col">Id</th>
+              <th scope="col">Mövzu</th>
+              <th scope="col">Yazan</th>
+              <th scope="col">Tarix</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+              <th scope="row">{{article.id}}</th>
+              <td>{{article.title}}</td>
+              <td>{{article.author}}</td>
+              <td>{{article.created_date}}</td>
+              <td><a href="/edit/{{article.id}}"   class="btn btn-danger">Düzəliş et</a></td>
+              <td><a href="/delete/{{article.id}}" class="btn btn-danger">Sil</a></td>
+            </tr>
+            {% endfor %}
+        <tbody>        
+    </table>                       
+</div>
+{% else %}
+<div class="alert alert-info"> Hələlik göstəriləcək heç bir məqalən yoxdur, {{session["username"]}}<div>
+{% endif %}
+{% endblock%}
